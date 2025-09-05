@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Changer</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+    .button {
+      height: 50px;
+      width: 50px;
+      border: 2px solid #000;
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    #grey { background-color: grey; }
+    #white { background-color: white; border: 2px solid #ccc; }
+    #blue { background-color: blue; }
+    #yellow { background-color: yellow; }
+  </style>
+</head>
+<body>
+  <h1>Click on a color to change background</h1>
+
+  <div class="button" id="grey"></div>
+  <div class="button" id="white"></div>
+  <div class="button" id="blue"></div>
+  <div class="button" id="yellow"></div>
+
+  <script>
+    console.log("hitesh")
+    const buttons = document.querySelectorAll('.button');
+    const body = document.querySelector('body');
+
+    buttons.forEach(function (button) {
+      console.log(button);
+      button.addEventListener('click', function (e) {
+        console.log(e);
+        console.log(e.target);
+        if (e.target.id === 'grey') {
+          body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === 'white') {
+          body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === 'blue') {
+          body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === 'yellow') {
+          body.style.backgroundColor = e.target.id;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
